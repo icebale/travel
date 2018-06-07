@@ -22,9 +22,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+    @import '~styles/varibles.styl';
     .header
       display:flex
-      background :#00bcd4
+      background :$bgColor
       color:#fff
       line-height:.86rem
       .back-icon
@@ -49,4 +50,5 @@ export default {
       text-align:center
       .arrow-icon
         font-size:.24rem
+        margin-left:-0.04rem
 </style>
