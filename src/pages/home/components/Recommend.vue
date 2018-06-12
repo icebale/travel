@@ -2,7 +2,7 @@
     <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom"  v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom"  v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
     name:"HomeRecommend",
-    data(){
-        return {
-            recommendList:[{
-                id:"001",
-                imgUrl:"http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg",
-                title:"北京野生动物园",
-                desc:"北京野生动物园集动物保护、野生动物驯养繁殖及科普教育为一体，汇集了世界各地珍稀野生动物200多种10000余头。"
-            },{
-                id:"002",
-                imgUrl:"http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg",
-                title:"北京野生动物园",
-                desc:"北京野生动物园集动物保护、野生动物驯养繁殖及科普教育为一体，汇集了世界各地珍稀野生动物200多种10000余头。"
-            },{
-                id:"003",
-                imgUrl:"http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg",
-                title:"北京野生动物园",
-                desc:"北京野生动物园集动物保护、野生动物驯养繁殖及科普教育为一体，汇集了世界各地珍稀野生动物200多种10000余头。"
-            }]
-        }
+    props:{
+      list:Array
     }
 }
 </script>
