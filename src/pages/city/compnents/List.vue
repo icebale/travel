@@ -41,7 +41,7 @@ import BScroll from 'better-scroll'
         },
         watch:{
             letter(){
-                console.log(this.$refs[this.letter])
+                //console.log(this.$refs[this.letter])
                 const element = this.$refs[this.letter][0];
                 if(this.letter){
                     this.scroll.scrollToElement(element)
