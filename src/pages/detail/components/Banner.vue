@@ -15,7 +15,7 @@
 
 <script>
     import CommonGallary from 'common/gallary/Gallary'
-
+    
     export default {
         name:"DetailBanner",
         components:{
