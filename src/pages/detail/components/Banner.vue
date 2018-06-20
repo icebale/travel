@@ -1,11 +1,11 @@
 <template>
     <div>
         <div class="banner">
-            <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_600x330_75d1925c.jpg" @click="handleGallaryShow" alt="">
+            <img class="banner-img" :src="bannerImg" @click="handleGallaryShow" alt="">
             <div class="banner-info">
-                <div class="banner-title">颐和园（AAAAA级景区）</div>
+                <div class="banner-title">{{sightName}}</div>
                 <div class="banner-num">
-                    <span class="iconfont banner-icon">&#59026;</span>11
+                    <span class="iconfont banner-icon">&#59026;</span>{{imgs.length}}
                 </div>
             </div>
         </div>
@@ -21,10 +21,14 @@
         components:{
             CommonGallary
         },
+        props:{
+            sightName:String,
+            bannerImg:String,
+            imgs:Array
+        },
         data(){
             return {
-                showGallary:false,
-                imgs:["http://img1.qunarzz.com/sight/p0/1408/28/e98c88b6d7472d15660d60833b2898d1.jpg_r_800x800_f6182f45.jpg","http://img1.qunarzz.com/sight/p0/1408/28/c3d9d39adcb581fff6731a86522dced8.jpg_r_800x800_ca45c72f.jpg"]
+                showGallary:false
             }
         },
         methods:{
