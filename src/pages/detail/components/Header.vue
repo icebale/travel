@@ -3,7 +3,7 @@
         <router-link to="/" tag="div" class="header-abs" v-show="absShow">
             <div class="iconfont header-abs-back">&#xe624;</div>
         </router-link>
-        <div class="header-fixed" v-show="!absShow" :style="opcityStyle">
+        <div class="header-fixed" v-show="!absShow" :style="opacityStyle">
             <router-link to="/">
                 <div class="iconfont header-fixed-back">&#xe624;</div>
             </router-link>
@@ -18,20 +18,20 @@ export default {
     data () {
         return {
             absShow:true,
-            opcityStyle:{
-                opcity:0
+            opacityStyle:{
+                opacity:0
             }
         }
     },
     methods: {
         handleScroll () {
             const top = document.documentElement.scrollTop
-            console.log(top)
+            //console.log(top)
             if(top>50){
-                let opcity = top/120;
-                opcity = opcity > 1 ? 1 : opcity ;
-                this.opcityStyle = {
-                    opcity
+                let opacity = top/120;
+                opacity = opacity > 1 ? 1 : opacity ;
+                this.opacityStyle = {
+                    opacity
                 }
                 this.absShow = false
             }else{
